@@ -1,0 +1,49 @@
+{
+  "name": "hasc",
+  "author": "Atomic Regulator",
+  "version": "1.0.0",
+  "keywords": ["pebble-app", "home-assistant", "home assistant", "home assistant shortcuts", "shortcuts", "home automation", "home-automation", "home-assistant-shortcuts"],
+  "private": false,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "HASC",
+    "uuid": "9c9c65c3-11e2-40bc-b7de-8c07c449b687",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite",
+      "emery",
+      "flint",
+      "gabbro"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "capabilities": ["configurable"],
+    "messageKeys": [
+      "Action",
+      "Status",
+      "Error",
+      "SettingsNeeded",
+      "ItemCount",
+      "Index",
+      "Entity",
+      "Name",
+      "State",
+      "StatePending"
+    ],
+    "resources": {
+      "media": [
+        {
+          "type": "png",
+          "name": "IMAGE_MENU_ICON",
+          "file": "images/menu_icon.png",
+          "menuIcon": true
+        }
+      ]
+    }
+  }
+}
