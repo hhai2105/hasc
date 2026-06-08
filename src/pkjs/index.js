@@ -409,6 +409,7 @@ function triggerItem(index, pressType) {
       return;
     }
 
+
     if (isAutomationEntity(target)) {
       refreshItemStatusesInBackground();
       return;
@@ -421,15 +422,17 @@ function triggerItem(index, pressType) {
       return;
     }
 
-    request('GET', '/api/states/' + encodeURIComponent(statusEntity), null, function(stateError, state) {
-      if (stateError) {
-        refreshStates();
-        return;
-      }
+    setTimeout(function() {
+      request('GET', '/api/states/' + encodeURIComponent(statusEntity), null, function(stateError, state) {
+        if (stateError) {
+          refreshStates();
+          return;
+        }
 
-      sendItem(index, item, state, true);
-      sendStatus('Ready');
-    });
+        sendItem(index, item, state, true);
+        sendStatus('Ready');
+      });
+    }, 500);
   });
 }
 
